@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-api-configuration
+  namespace: test
+  uid: 668c14b2-f0b9-4035-994d-74fc83f4b0f6
+  resourceVersion: '84127010'
+  creationTimestamp: '2025-04-21T03:11:25Z'
+  managedFields:
+    - manager: Mozilla
+      operation: Update
+      apiVersion: v1
+      time: '2025-04-21T06:45:55Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:data':
+          .: {}
+          'f:test-api-appsettings': {}
+        'f:immutable': {}
+data:
+  test-api-appsettings: |-
+    {
+      "Logging": {
+        "LogLevel": {
+          "Default": "Information",
+          "Microsoft.AspNetCore": "Warning"
+        }
+      },
+      "AllowedHosts": "*",
+      "ConnectionStrings": {
+        "DB_connection": "server=172.21.14.110;port=3306;user id=superline;password=superline;database=test_lab;sslmode=none;charset=utf8mb4;ConnectionTimeout=30;AllowLoadLocalInfile=true;",
+        "FugoDB_connection": "User Id=test_message;Password=t$39ws@An}Tb;Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=oclab01.testzone.net)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=ehstest)))",
+        "MSSQL_connection": "Data Source=dalab.testzone.net;Initial Catalog=test;User ID=test_user;Password=test0616;TrustServerCertificate=True"
+      },
+      "SYS_DB": "mysql",
+      "SYS_HashKey": "JrNMe6SDkeuAvDnJidsqcW1GsT7cFJkW",
+      "SYS_CACHE_KeyPrefix": "test_WebAPI_",
+      "SYS_Redis": {
+        "value": "redis-ha-headless.test.svc.cluster.local,abortConnect=false,serviceName=mymaster,password=ec@test,syncTimeout=10000",
+        "lockItem": false
+      }
+    }
+binaryData: {}
+immutable: false

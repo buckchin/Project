@@ -1,0 +1,45 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: test-api
+  namespace: test
+  uid: a18641fb-9989-4411-adc8-a4f9e66f08be
+  resourceVersion: '83991844'
+  creationTimestamp: '2025-04-21T03:22:18Z'
+  managedFields:
+    - manager: Mozilla
+      operation: Update
+      apiVersion: v1
+      time: '2025-04-21T03:22:18Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:spec':
+          'f:internalTrafficPolicy': {}
+          'f:ports':
+            .: {}
+            'k:{"port":8080,"protocol":"TCP"}':
+              .: {}
+              'f:port': {}
+              'f:protocol': {}
+              'f:targetPort': {}
+          'f:selector': {}
+          'f:sessionAffinity': {}
+          'f:type': {}
+spec:
+  clusterIP: 172.30.153.123
+  ipFamilies:
+    - IPv4
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  internalTrafficPolicy: Cluster
+  clusterIPs:
+    - 172.30.153.123
+  type: ClusterIP
+  ipFamilyPolicy: SingleStack
+  sessionAffinity: None
+  selector:
+    app: test-api
+status:
+  loadBalancer: {}
