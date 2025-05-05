@@ -98,6 +98,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     });
 }
 ```
+ChatHub 
 ```csharp
 public class ChatHub : Hub
 {
@@ -107,7 +108,7 @@ public class ChatHub : Hub
     }
 }
 ```
-
+javascript
 ```javascript
 <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.0/signalr.min.js"></script>
 <script>
