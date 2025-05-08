@@ -1,4 +1,0 @@
-docker stop line && docker rm line 
-docker rmi docker.testzone.net/line 
-
-docker run -d --restart always --network=msg -e "ASPNETCORE_ENVIRONMENT=Lab" -e "http_proxy=http://172.21.11.11:8080" -e "https_proxy=http://172.21.11.11:8080" -e "no_proxy=.testzone.net" -v /home/admin/log/test/:/var/log -v /mnt/test/new_media:/app/wwwroot/new_media --name testline docker.testzone.net/line

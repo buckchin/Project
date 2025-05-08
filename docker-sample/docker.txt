@@ -1,4 +1,0 @@
- docker build -t imgrepo.test.net/line/lineapi .
- docker push imgrepo.test.net/line/lineapi
- docker ps
- docker exec -it line bash
